@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: rgb(156, 61, 211);
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+
+}
+
+ul{
+    overflow: hidden;
+}
+
+nav li a:hover{
+    background-color: blue;
+}
+
+.dropDown_menu{
+    position: absolute;
+    box-shadow: 0 0 2px;;
+    display: none;
+
+}
+
+.dropDown_menu a {
+    display: block;
+    
+}
+
+.dropDown:hover .dropDown_menu {
+    display: block;
+}
+
+button{
+  
+    background-color: transparent;
+    border: none;
+    color:rgb(0, 0, 0);
+    font-size: 36px;
+    position: absolute;
+    display: none;
+    
+   
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta o menu na tela pequena */
+        flex-direction: column;
+        position: absolute;
+        background-color: #9c3dd3;
+        padding: 10px;
+    }
+
+    nav ul.active{
+        display: flex; /* Exibe o menu ao clicar no botão */
+    }
+
+    nav li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav li a {
+        padding: 10px 0;
+    }
+
+    .dropDown_menu {
+        position: relative;
+        display: block;
+    }
+
+    button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+ 
+    }
+
+    button:checked ~ .dropDown{
+
+        height: 250px;
+    
+    }
+   
+}
